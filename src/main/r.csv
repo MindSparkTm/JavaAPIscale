@@ -1,0 +1,5 @@
+id,parent_id,type,name
+0,-1,Country,Kenya
+1,0,County,Mombasa
+2,0,County,Kwale
+3,0,County,Kilifi
