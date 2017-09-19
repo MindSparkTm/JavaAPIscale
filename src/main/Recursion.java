@@ -33,27 +33,32 @@ public class Recursion {
 		
 		//first step is to get the id of the county
 		
-		System.out.println(counties.get("Kisumu"));
         // Now look for the subcounties with that id
 		
 		System.out.println(subcounties);
-        
-		System.out.println(subcounties.get("42"));
-		//Got the subcounties under Kisumu
+            
+		ArrayList<String>countyid = (ArrayList<String>) counties.get("Mombasa");
 		
-		//Now look for the wards under each of those subcounties
-		//Lets say Kisumu East
+		String county_id = "";
 		
-		System.out.println(subcountyid.get("Kisumu East"));
-		//Now look for wards with that subcounty id
+		for(String a:countyid) {
+			county_id = a;
+		}
+			
 		
-		System.out.println(wards.get("285"));
-      
-        
-        
-        
-        
-        
+		ArrayList<String>subcountynames = (ArrayList<String>) subcounties.get(county_id);
+		
+		System.out.println("Subcounties are "+subcountynames);
+
+
+     	for(String z:subcountynames) {
+          ArrayList<String>cnames = (ArrayList<String>) subcountyid.get(z);	
+          for(String k:cnames) {
+        	  System.out.println("Wards under:"+k +"\t"+wards.get(k));
+          }
+		}
+		
+	
         
         
 		
