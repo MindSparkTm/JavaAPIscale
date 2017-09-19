@@ -1,5 +1,6 @@
 package main;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -8,6 +9,10 @@ import org.apache.commons.collections4.map.MultiValueMap;
 
 public class Data {
 	private MultiValueMap<String, String> counties;
+    private MultiValueMap <String,String>subcountyid;
+	public MultiValueMap<String, String> getSubcountyid() {
+		return subcountyid;
+	}
 
 	public MultiValueMap<String, String> getCounties() {
 		return counties;
@@ -31,10 +36,14 @@ public class Data {
 		// TODO Auto-generated method stub
 		this.counties = counties;
 	}
-	
+	public void setSubcountyid(MultiValueMap subcountyid) {
+		// TODO Auto-generated method stub
+		this.subcountyid = subcountyid;
 
+	}
 	
-	
+ 
+
 	
 
 }
